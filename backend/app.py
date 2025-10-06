@@ -16,11 +16,13 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SESSION_COOKIE_SAMESITE'] = 'None'
 app.config['SESSION_COOKIE_SECURE'] = True
 
-db = SQLAlchemy(app)
 CORS(app, resources={r"/api/*": {"origins": [
     "https://wishlist-santa-frontend.onrender.com",
     "http://localhost:3000"
 ]}}, supports_credentials=True)
+
+db = SQLAlchemy(app)
+
 
 
 class User(db.Model):
