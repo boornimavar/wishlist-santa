@@ -17,7 +17,7 @@ app.config['SESSION_COOKIE_SAMESITE'] = 'None'
 app.config['SESSION_COOKIE_SECURE'] = True
 
 db = SQLAlchemy(app)
-CORS(app, supports_credentials=True, origins=['http://localhost:3000', 'https://wishlist-santa-1.onrender.com'])
+CORS(app, supports_credentials=True, origins=['https://wishlist-santa-1.onrender.com'])
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
